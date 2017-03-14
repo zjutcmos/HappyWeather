@@ -5,7 +5,7 @@
     <list>
         <mapping class="com.cmos.happyweather.model.Province" />
         <mapping class="com.cmos.happyweather.model.City" />
-        <mapping class="com.cmos.happyweather.model.Country" />
+        <mapping class="com.cmos.happyweather.model.County" />
     </list>
 
 </litepal>

@@ -3,32 +3,34 @@ package com.cmos.happyweather.model;
 import org.litepal.crud.DataSupport;
 
 public class Province extends DataSupport {
-	private int id;
-	private String provinceName;
-	private String provinceCode;
 
-	public int getId() {
-		return id;
-	}
+    private int id;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    private String provinceName;
 
-	public String getProvinceName() {
-		return provinceName;
-	}
+    private int provinceCode;
 
-	public void setProvinceName(String provinceName) {
-		this.provinceName = provinceName;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getProvinceCode() {
-		return provinceCode;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setProvinceCode(String provinceCode) {
-		this.provinceCode = provinceCode;
-	}
+    public String getProvinceName() {
+        return provinceName;
+    }
 
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
+    }
+
+    public int getProvinceCode() {
+        return provinceCode;
+    }
+
+    public void setProvinceCode(int provinceCode) {
+        this.provinceCode = provinceCode;
+    }
 }

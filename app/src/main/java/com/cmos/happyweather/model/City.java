@@ -3,41 +3,45 @@ package com.cmos.happyweather.model;
 import org.litepal.crud.DataSupport;
 
 public class City extends DataSupport {
-	private int id;
-	private String cityName;
-	private String cityCode;
-	private int provinceId;
 
-	public int getId() {
-		return id;
-	}
+    private int id;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    private String cityName;
 
-	public String getCityName() {
-		return cityName;
-	}
+    private int cityCode;
 
-	public void setCityName(String cityName) {
-		this.cityName = cityName;
-	}
+    private int provinceId;
 
-	public String getCityCode() {
-		return cityCode;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setCityCode(String cityCode) {
-		this.cityCode = cityCode;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public int getProvinceId() {
-		return provinceId;
-	}
+    public String getCityName() {
+        return cityName;
+    }
 
-	public void setProvinceId(int provinceId) {
-		this.provinceId = provinceId;
-	}
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public int getCityCode() {
+        return cityCode;
+    }
+
+    public void setCityCode(int cityCode) {
+        this.cityCode = cityCode;
+    }
+
+    public int getProvinceId() {
+        return provinceId;
+    }
+
+    public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
+    }
 
 }
