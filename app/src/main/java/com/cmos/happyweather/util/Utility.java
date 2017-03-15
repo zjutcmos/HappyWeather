@@ -2,9 +2,11 @@ package com.cmos.happyweather.util;
 
 import android.text.TextUtils;
 
+import com.cmos.happyweather.gson.Weather;
 import com.cmos.happyweather.model.City;
 import com.cmos.happyweather.model.County;
 import com.cmos.happyweather.model.Province;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -78,5 +80,21 @@ public class Utility {
             e.printStackTrace();
         }
         return false;
+    }
+
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     */
+    public static Weather handleWeatherResponse(String response){
+        try{
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather");
+            String weatherContent=jsonArray.getJSONObject(0).toString();
+            Weather weather=new Gson().fromJson(weatherContent,Weather.class);
+            return weather;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 }
