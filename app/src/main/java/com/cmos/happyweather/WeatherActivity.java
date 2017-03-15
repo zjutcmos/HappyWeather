@@ -10,7 +10,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +34,6 @@ import okhttp3.Response;
 
 public class WeatherActivity extends AppCompatActivity {
 
-    private long mkeyTime;
     public DrawerLayout drawerLayout;
 
     public SwipeRefreshLayout swipeRefresh;
@@ -235,23 +233,6 @@ public class WeatherActivity extends AppCompatActivity {
         weatherLayout.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this, AutoUpdateService.class);
         startService(intent);
-    }
-
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // TODO Auto-generated method stub
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if ((System.currentTimeMillis() - mkeyTime) > 2000) {
-                mkeyTime = System.currentTimeMillis();
-                Toast.makeText(this, "再按一次退出程序",
-
-                        Toast.LENGTH_LONG).show();
-            } else {
-                finish();
-            }
-            return true;
-        }
-        // finish();
-        return super.onKeyDown(keyCode, event);
     }
 
 }
